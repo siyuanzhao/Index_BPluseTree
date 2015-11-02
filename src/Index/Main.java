@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Main{
 	public static void main(String[] args) {
 		BPTree<Integer> bpTree1=new BPTree<>(4, 10);
-		BPTree<String> bpTree2=new BPTree<>(3, 10);
+		BPTree<String> bpTree2=new BPTree<>(6, 10);
 
 		DBObject movies=new DBObject();
 		ArrayList<DBObject> listToStoreDB= new ArrayList<DBObject>();

@@ -4,7 +4,7 @@ American Beauty,1999,DVD,Drama,Sam Mendes,Alan Ball,USA,Cohen Productions / Drea
 And Mother Makes Four,1977,VHS,Comedy,Bill Hobin,Don Nicholl,USA,,$0.00,
 A Beautiful Mind,2001,DVD,Drama,Ron Howard,Akiva Goldsman,USA,Universal Pictures,$15.00,0054
 Better Off Dead,1985,LaserDisc,Comedy,Savage Steve Holland,Mankofsky Isidore Holland,USA,Warner Brothers,$15.00,0055
-Crouching Tiger, Hidden Dragon,2000,DVD,Action,Ang Lee,Du Lu Wang,Taiwan,Asia / Columbia Pictures / Good Machine / Sony Pic,$15.00,0528
+Crouching Tiger/ Hidden Dragon,2000,DVD,Action,Ang Lee,Du Lu Wang,Taiwan,Asia / Columbia Pictures / Good Machine / Sony Pic,$15.00,0528
 Ghost,1990,LaserDisc,Romance,Jerry Zucker,Bruce Joel Rubin,USA,Paramount Pictures,$0.00,0699
 Gladiator,2000,DVD,Epic,Ridley Scott,John Logan,USA,DreamWorks / Universal  (Foreign),$15.00,0169
 The Incredibles,2004,DVD,Animation,Brad Bird,Brad Bird,USA,Walt Disney Pictures,$0.00,0703
@@ -19,7 +19,7 @@ A Man About the House,1977,VHS,Comedy,Bill Hobin,Don Nicholl,USA,,$0.00,
 The Matrix,1999,DVD,Science Fiction,Andy Wachowski, Larry Wachowski,Andy Wachowski,USA,Warner Brothers,$15.00,0455
 Moulin Rouge,2001,DVD,Musical,Baz Luhrmann,Craig Pearce,USA,20th Century Fox,$15.00,0260
 Mr. & Mrs. Smith,2005,DVD,Action,Doug Liman,Simon Kinberg,USA,20th Century Fox,$15.00,0261
-No Children, No Pets,1977,VHS,Comedy,Bill Hobin,Paul Wayne,USA,,$0.00,
+No Children/ No Pets,1977,VHS,Comedy,Bill Hobin,Paul Wayne,USA,,$0.00,
 The One Where Monica Gets A Roommate (a.k.a. The One Where It All Began),1994,DVD,Comedy,James Burrows,David Crane,USA,,$0.00,
 The One Where Nana Dies Twice,1994,DVD,Comedy,James Burrows,Marta Kauffman,USA,,$0.00,
 The One Where Underdog Gets Away,1994,DVD,Comedy,James Burrows,Jeff Strauss,USA,,$0.00,

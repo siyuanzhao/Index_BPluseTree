@@ -19,7 +19,7 @@ public class BPTree<E extends Comparable<E>> implements Serializable{
     private BasicMethods<E> nm;
     private LinkedList<Node<E>> buffer;
     private int bufferPoolSize;
-	private static final String fileLocation = "/Users/boyazhou/Desktop/CS542.db";
+	private static final String fileLocation = "D:\\用户目录\\我的文档\\GitHub\\Index_BPluseTree\\src\\Index\\CS542.db";
 
     public BPTree(int fanOut, int bufferbool) {
         super();
@@ -83,17 +83,17 @@ public class BPTree<E extends Comparable<E>> implements Serializable{
     // ===========================INSERTION==================================
    /* procedure insert(value K, pointer P)
     if (tree is empty) create an empty leaf node L, which is also the root else Find the leaf node L that should contain key value K
-    if (L has less than n − 1 key values)
+    if (L has less than n 鈭�1 key values)
     then insert in leaf (L, K, P)
-    else begin  L has n − 1 key values already, split it 
-    Create node L′
-    Copy L.P1 ... L.Kn−1 to a block of memory T that can
+    else begin  L has n 鈭�1 key values already, split it 
+    Create node L鈥�
+    Copy L.P1 ... L.Kn鈭� to a block of memory T that can
     hold n (pointer, key-value) pairs
     insert in leaf (T, K, P)
-    Set L′.Pn = L.Pn; Set L.Pn = L′
-    Erase L.P1 through L.Kn−1 from L
-    Copy T.P1 through T.K⌈n/2⌉ from T into L starting at L.P1 Copy T.P⌈n/2⌉+1 through T.Kn from T into L′ starting at L′.P1 Let K′ be the smallest key-value in L′
-    insert in parent(L, K′, L′)
+    Set L鈥�Pn = L.Pn; Set L.Pn = L鈥�
+    Erase L.P1 through L.Kn鈭� from L
+    Copy T.P1 through T.K鈱坣/2鈱�from T into L starting at L.P1 Copy T.P鈱坣/2鈱�1 through T.Kn from T into L鈥�starting at L鈥�P1 Let K鈥�be the smallest key-value in L鈥�
+    insert in parent(L, K鈥� L鈥�
     end*/
     @SuppressWarnings("unchecked")
     public void insertNode(E keyValue, Object data) {
@@ -209,7 +209,7 @@ public class BPTree<E extends Comparable<E>> implements Serializable{
     // ======================================================================
     // ==============================DELETION================================
     @SuppressWarnings("unchecked")
-    public void delete(E key) {
+    public void delete(E key, Object dataValue) {
         LinkedList<Node<E>> stack = new LinkedList<Node<E>>();
         Node<E> n = root;
         //secrching for the required node
@@ -233,7 +233,7 @@ public class BPTree<E extends Comparable<E>> implements Serializable{
         boolean flag = false;
         for (int i = 0; i < n.getKeyValue().size(); i++) {
             if (n == root && key == n.getKeyValue().get(i)) {
-                nm.deleteNode(n, key);
+                nm.deleteNode(n, key, dataValue);
                 return;
             } else if (key == n.getKeyValue().get(i)) {
                 flag = true;
@@ -244,7 +244,7 @@ public class BPTree<E extends Comparable<E>> implements Serializable{
         if (flag) {
             //if the node isn't under flow
             if (n.getKeyValue().size() - 1 >= Math.ceil(fanOut / 2.0)) {
-                nm.deleteNode(n, key);
+                nm.deleteNode(n, key, dataValue);
                 Node<E> parent = stack.peek();
                 for (int i = 0; i < parent.getKeyValue().size(); i++) {
                     if (key.compareTo(parent.getKeyValue().get(i)) == 0) {
@@ -260,7 +260,7 @@ public class BPTree<E extends Comparable<E>> implements Serializable{
                 // if next from the same parent
                 if (deter == 1) {
                     // delete the node
-                    nm.deleteNode(n, key);
+                    nm.deleteNode(n, key, dataValue);
                     // borrow from the next leaf node
                     E element = n.getNext().getKeyValue().remove(0);
                     Object obj = n.getNext().getPointers().remove(0);
@@ -281,7 +281,7 @@ public class BPTree<E extends Comparable<E>> implements Serializable{
                     return;
                 } else if (deter == 2) {
                     // borrow from the previous node
-                    nm.deleteNode(n, key);
+                    nm.deleteNode(n, key, dataValue);
                     E element = n.getPrev().getKeyValue().remove(n.getPrev().getKeyValue().size() - 1);
                     Object obj = n.getPrev().getPointers().remove(n.getPrev().getPointers().size() - 1);
                     n.getKeyValue().add(0, element);
@@ -306,7 +306,7 @@ public class BPTree<E extends Comparable<E>> implements Serializable{
                         prevB = false;
                     }
 
-                    nm.deleteNode(n, key);
+                    nm.deleteNode(n, key, dataValue);
                     int tempKey = 0;
                     int tempPointer = 0;
                     // if the merging will be with the next node

@@ -12,7 +12,7 @@ public class DBObject implements Serializable{
 
 	private static final long serialVersionUID = -2141060261129697474L;
 
-	private static final String fileLocation = "/Users/boyazhou/Desktop/CS542.db";
+	private static final String fileLocation = "D:\\用户目录\\我的文档\\GitHub\\Index_BPluseTree\\src\\Index\\CS542.db";
 
 	//Movies(Title, Year, Format, Genre, Director, Writer, Country, Studio, Price, Catalog No)
     public String title;
@@ -44,7 +44,7 @@ public class DBObject implements Serializable{
 	}
 	
 	 public ArrayList<DBObject> read() {
-			String csvFile = "/Users/boyazhou/Desktop/movies.txt";
+			String csvFile = "D:\\用户目录\\我的文档\\GitHub\\Index_BPluseTree\\src\\Index\\movies.txt";
 			BufferedReader bufferedReader = null;
 			String line = "";
 			String cvsSplitBy = ",";

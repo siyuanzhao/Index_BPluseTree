@@ -36,7 +36,6 @@ public class IndexInterface<E extends Comparable<E>> {
 	            	key +=(String) nodeToFind.getPointers().get(i) + " | ";
 	            } else {
 	            	b = true;
-	            	break;
 	            }
 	        }
 			if(b) {
@@ -76,7 +75,7 @@ public class IndexInterface<E extends Comparable<E>> {
 			for(int i=0; i < node.getPointers().size(); i++) {
 				String s = (String)node.getPointers().get(i);
 				if(key.equals(s)) {
-					bpTree.delete(node.getKeyValue().get(i));
+					bpTree.delete(node.getKeyValue().get(i), key);
 				}
 			}
 			node = node.getNext();

@@ -65,9 +65,9 @@ public class BasicMethods<E extends Comparable<E>> implements Serializable {
         }
     }
 
-    public void deleteNode(Node<E> n, E k) {
+    public void deleteNode(Node<E> n, E k, Object dataValue) {
         for (int i = 0; i < n.getKeyValue().size(); i++) {
-            if (k.compareTo(n.getKeyValue().get(i)) == 0) {
+            if (k.compareTo(n.getKeyValue().get(i)) == 0 && dataValue.equals(n.getPointers().get(i))) {
                 n.getKeyValue().remove(i);
                 n.getPointers().remove(i);
             }
